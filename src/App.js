@@ -1,10 +1,10 @@
-import Search from './components/home/Search.js';
+import Header from './components/common/Header.js';
 
 function App() {
   return (
     <div>
     <p>Welcome To Marketplace</p>
-    <Search/>
+    <Header/>
     </div>
   );
 }

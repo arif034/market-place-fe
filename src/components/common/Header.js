@@ -1,17 +1,19 @@
-import {Component} from 'react'
+import {useState} from 'react'
 
-class Header extends Component{
+function Header() {
 
-    constructor(props)
-    {
-        super(props);
-        this.state = {
-            
-        }
+    const [message, setMessage] = useState('')
+
+    function onChange(event){
+        console.log(event.target.value);
+        setMessage(event.target.value);
     }
+
     render()
     {
-        return<div></div>
+        return<div>
+            <input type = "text" value = {message} onChange = {onChange}/>
+        </div>
     }
 }
 
