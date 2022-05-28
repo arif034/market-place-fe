@@ -1,11 +1,19 @@
-function Header() {
-    function onChange(val)
+import {useState} from 'react'
+
+function Header(){
+
+    const [message, setMessage] = useState('')
+
+    const onChange = (event) =>
     {
-        console.log(val.target.value);
+        setMessage(event.target.value)
+        console.log(event.target.value);
     }
-        return(<div>
-            <input type = "text" onChange = {onChange}/>
-        </div>);
+
+    return(<div>
+        <input type = "text" value = {message} onChange = {onChange}/>
+        {message}
+    </div>);
 }
 
 export default Header;
